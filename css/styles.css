@@ -57,7 +57,11 @@ body{
 }
 .main{
     height: 300px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 40px 40px;
 }
 .main__titulo{
     color: white;
@@ -67,7 +71,7 @@ body{
     margin: 15px 0px 0px 0px;
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
-    border-radius: px;
+    border-radius: 25px;
     color: white;
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
@@ -80,9 +84,16 @@ body{
     color: white;
 }
 
+.categories__title{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
 .carousel{
     width: 100%;
-    overflow: scroll;
+    /* overflow: scroll; */
     padding: 30px;
     position: relative;
 }
@@ -135,4 +146,43 @@ body{
 }
 .carousel-item__details:hover{
     opacity: 1;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #AB88FF;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.login__container--is{
+    align-self: center;
+}
+.login__container--is a{
+    color: white;
+    text-decoration: none;
+}
+.login__container--is a:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
